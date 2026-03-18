@@ -24,7 +24,7 @@ public class AnimalesWS {
         return service.guardar(a);
     }
 
-    @PostMapping("buscar/{id}")
+    @GetMapping("buscar/{id}")
     public Animales buscar(@PathVariable int id) {
         return service.buscar(id);
     }
@@ -37,5 +37,15 @@ public class AnimalesWS {
     @DeleteMapping("eliminar/{id}")
     public void eliminar(@PathVariable int id) {
         service.eliminar(id);
+    }
+
+    @GetMapping("buscarPorNombre/{nombre}")
+    public Animales buscarPorNombre(@PathVariable String nombre) {
+        return service.buscarPorNombre(nombre);
+    }
+
+    @GetMapping("buscarPorTipo")
+    public List<Animales> buscarPorTipo(@RequestParam String tipo){
+        return service.buscarPorTipo(tipo);
     }
 }

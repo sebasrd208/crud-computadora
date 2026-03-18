@@ -38,4 +38,12 @@ public class AnimalesService implements iAnimalesService{
     public List<Animales> listar() {
         return dao.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
+
+    public Animales buscarPorNombre(String nombre) {
+        return dao.findByNombreIgnoreCase(nombre);
+    }
+
+    public List<Animales> buscarPorTipo(String tipo){
+        return dao.findByTipoIgnoreCase(tipo);
+    }
 }
