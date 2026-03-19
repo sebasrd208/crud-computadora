@@ -1,7 +1,8 @@
-package com.mx.animales.service;
+package com.mx.animales.service.serviceImp;
 
 import com.mx.animales.dao.iAnimalesDao;
 import com.mx.animales.dominio.Animales;
+import com.mx.animales.service.iAnimalesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class AnimalesService implements iAnimalesService{
+public class AnimalesService implements iAnimalesService {
 
     @Autowired
     iAnimalesDao dao;

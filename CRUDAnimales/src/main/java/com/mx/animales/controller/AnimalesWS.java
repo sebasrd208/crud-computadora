@@ -1,7 +1,7 @@
 package com.mx.animales.controller;
 
 import com.mx.animales.dominio.Animales;
-import com.mx.animales.service.AnimalesService;
+import com.mx.animales.service.serviceImp.AnimalesService;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
